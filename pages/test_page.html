@@ -55,8 +55,47 @@
       
   <!-- Page Content -->
   <main class="main-content">
-    
-  </main>
+    <div class="container text-center">
+        <!-- Header -->
+        <div class="row justify-content-between align-items-center mb-3">
+            <div id="question-number" class="col-auto">Question Number: 1</div>
+            <div id="score" class="col-auto">Score: 0</div>
+            <div id="timer" class="col-auto">Timer: 30s</div>
+        </div>
+
+        <!-- Question -->
+        <div class="row question-row-gap py-4 bg-light rounded">
+            <div class="col">
+                <h3 id="question" class="fw-bold">Question:</h3>
+            </div>
+        </div>
+
+        <!-- Answer Options -->
+        <div class="row justify-content-center g-3" id="options">
+            <div class="col-md-2 text-center">
+                <button class="btn btn-outline-primary w-100" data-option="1">Opt. 1</button>
+            </div>
+            <div class="col-md-2 text-center">
+                <button class="btn btn-outline-primary w-100" data-option="2">Opt. 2</button>
+            </div>
+            <div class="col-md-2 text-center">
+                <button class="btn btn-outline-primary w-100" data-option="3">Opt. 3</button>
+            </div>
+            <div class="col-md-2 text-center">
+                <button class="btn btn-outline-primary w-100" data-option="4">Opt. 4</button>
+            </div>
+            <div class="col-md-2 text-center">
+                <button class="btn btn-outline-primary w-100" data-option="5">Opt. 5</button>
+            </div>
+        </div>
+
+        <!-- Answer Section -->
+        <div class="row answer-row-gap text-center my-4">
+            <div id="answer" class="col"></div>
+        </div>
+    </div>
+</main>
+
 
 </body>
   <script src="../js/test_page.js"></script>

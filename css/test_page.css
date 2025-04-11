@@ -1,0 +1,19 @@
+.custom-row-gap {
+    margin-bottom: 40px; /* Adds space below each row */
+    margin-top: 40px; /* Adds space above each row */
+}
+
+.question-row-gap {
+    margin-bottom: 50px; /* Adds space below each row */
+    margin-top: 50px; /* Adds space above each row */
+}
+
+.option-row-gap {
+    margin-bottom: 40px; /* Adds space below each row */
+    margin-top: 40px; /* Adds space above each row */
+}
+
+.answer-row-gap {
+    margin-bottom: 40px; /* Adds space below each row */
+    margin-top: 40px; /* Adds space above each row */
+}
