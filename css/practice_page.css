@@ -1,0 +1,11 @@
+/* Selected Button Style */
+.selected {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Error Message */
+.error {
+    border-bottom: 2px solid palevioletred;
+    border-radius: 20px;
+}

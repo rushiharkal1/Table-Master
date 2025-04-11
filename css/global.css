@@ -1,0 +1,18 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Makes scrolling smooth */
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.main-content{
+    margin-top: 70px;
+}
