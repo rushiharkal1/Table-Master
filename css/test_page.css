@@ -17,3 +17,7 @@
     margin-bottom: 40px; /* Adds space below each row */
     margin-top: 40px; /* Adds space above each row */
 }
+
+#question {
+    color: #151515;
+}

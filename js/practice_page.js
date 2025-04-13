@@ -8,7 +8,7 @@ function generateButtons(containerId, start, end) {
       colWrapper.className = "col mb-2 mx-auto"; // Bootstrap column for spacing
 
       const button = document.createElement("button");
-      button.className = "btn btn-outline-primary";
+      button.className = "btn btn-outline-secondary";
       button.style = "width: 50px; height: 40px;";
       button.innerText = i;
       button.onclick = () => toggleSelection(button);

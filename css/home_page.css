@@ -1,0 +1,97 @@
+/* home-container */
+.home-container{
+    margin-top: 20%;
+}
+
+/* Header */
+header {
+    font-size: 64px;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Container for the two flip animations */
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+  
+/* Common flip container styling */
+.flip {
+    position: relative;
+    width: 300px;
+    height: 60px;
+    overflow: hidden;
+    margin: 0 10px;
+}
+      
+/* Common styling for each flipping word */
+.flip div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    opacity: 0;
+    transition: opacity 0.6s, transform 0.6s;
+    padding: 5px 10px;
+    border-radius: 6px;
+}  
+
+/* --- Flip from Top (Left Container) --- */
+/* Initially, the word is hidden above */
+#flipTop div {
+    transform: translateY(-100%);
+}
+      
+/* Active state: word slides down into view */
+#flipTop div.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+      
+/* Exiting state: word slides down (exits toward bottom) */
+#flipTop div.exiting {
+    opacity: 0;
+    transform: translateY(100%);
+}
+      
+/* --- Flip from Bottom (Right Container) --- */
+/* Initially, the word is hidden below */
+#flipBottom div {
+    transform: translateY(100%);
+}
+      
+/* Active state: word slides up into view */
+#flipBottom div.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+      
+/* Exiting state: word slides up (exits toward top) */
+#flipBottom div.exiting {
+    opacity: 0;
+    transform: translateY(-100%);
+}
+      
+/* Background Colors for Each Animated Word */
+/* For flipTop container (left) */
+#flipTop div:nth-child(1).active { background-color: #1abc9c; }  /* "Table" */
+#flipTop div:nth-child(2).active { background-color: #e74c3c; }  /* "28 x 5" */
+#flipTop div:nth-child(3).active { background-color: #1abc9c; }  /* "Table" */
+#flipTop div:nth-child(4).active { background-color: #9b59b6; }  /* "2 x 50" */
+      
+/* For flipBottom container (right) */
+#flipBottom div:nth-child(1).active { background-color: #f1c40f; } /* "28 x 15" */
+#flipBottom div:nth-child(2).active { background-color: #34495e; } /* "Master" */
+#flipBottom div:nth-child(3).active { background-color: #f1c40f; } /* "12 x 50" */
+#flipBottom div:nth-child(4).active { background-color: #34495e; } /* "Master" */

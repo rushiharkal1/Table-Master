@@ -9,7 +9,9 @@ document.addEventListener("DOMContentLoaded", function () {
   
     // Check if data is available
     if (!tables || !multiples) {
-      console.error("Tables or Multiples data missing in localStorage!");
+      console.error("Tables or Multiples data missing in localStorage!\nGo back to Home Page.");
+      alert("Tables or Multiples data missing in localStorage!\nGo back to Home Page.");
+      window.location.href = "../home_page.html"; // Redirect to test page
       return;
     }
   
@@ -120,7 +122,7 @@ document.addEventListener("DOMContentLoaded", function () {
       optionsElement.innerHTML = ""; // Clear previous options
       options.forEach(option => {
         const button = document.createElement("button");
-        button.className = "btn btn-outline-primary w-100 my-2";
+        button.className = "btn btn-outline-secondary w-100 my-2";
         button.textContent = option;
         button.addEventListener("click", () => checkAnswer(parseInt(option), correctAnswer));
         const col = document.createElement("div");
