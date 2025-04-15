@@ -9,9 +9,9 @@ document.addEventListener("DOMContentLoaded", function () {
   
     // Check if data is available
     if (!tables || !multiples) {
-      console.error("Tables or Multiples data missing in localStorage!\nGo back to Home Page.");
-      alert("Tables or Multiples data missing in localStorage!\nGo back to Home Page.");
-      window.location.href = "../home_page.html"; // Redirect to test page
+      console.error("Practice test interrupted!\nGo back to Home Page.");
+      alert("Practice test interrupted!\nGo back to Home Page.");
+      window.location.href = "home_page.html"; // Redirect to test page
       return;
     }
   
