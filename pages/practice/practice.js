@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!tables || !multiples) {
       console.error("Practice test interrupted!\nGo back to Home Page.");
       alert("Practice test interrupted!\nGo back to Home Page.");
-      window.location.href = "home_page.html"; // Redirect to test page
+      window.location.href = "../home/home.html"; // Redirect to test page
       return;
     }
   

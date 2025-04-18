@@ -48,7 +48,7 @@ function startPractice() {
 
         localStorage.setItem("tables", JSON.stringify(selectedTables));
         localStorage.setItem("multiples", JSON.stringify(selectedMultiples));
-        window.location.href = "test_page.html"; // Redirect to test page
+        window.location.href = "../practice/practice.html"; // Redirect to test page
      
     } else {
         // Highlight the problematic section(s)
