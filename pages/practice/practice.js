@@ -76,8 +76,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // Called when the timer reaches zero
     function handleTimeOut() {
       answerElement.textContent = "Time Over!";
-      answerElement.classList.add("text-danger");
       answerElement.classList.remove("text-success");
+      answerElement.classList.add("text-danger");
   
       currentQuestionIndex++;
       setTimeout(() => {
@@ -97,7 +97,8 @@ document.addEventListener("DOMContentLoaded", function () {
       if (currentQuestionIndex >= questions.length) {
         questionElement.textContent = "Quiz Completed!";
         answerElement.textContent = `Your final score is ${score} out of ${totalQuestions}`;
-        answerElement.classList.add("text-primary");
+        answerElement.classList.remove("text-danger", "text-success");
+        answerElement.classList.add("text-success");
         optionsElement.innerHTML = ""; // Clear options
         timerElement.innerText = ""; // Clear timer
         return;
@@ -122,9 +123,9 @@ document.addEventListener("DOMContentLoaded", function () {
       optionsElement.innerHTML = ""; // Clear previous options
       options.forEach(option => {
         const button = document.createElement("button");
-        button.className = "btn btn-outline-secondary w-100 my-2";
+        button.className = "btn btn-secondary w-100 my-2";
         button.textContent = option;
-        button.addEventListener("click", () => checkAnswer(parseInt(option), correctAnswer));
+        button.addEventListener("click", () => checkAnswer(parseInt(option), correctAnswer, button));
         const col = document.createElement("div");
         col.className = "col-md-2";
         col.appendChild(button);
@@ -136,7 +137,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   
     // Check the selected answer
-    function checkAnswer(selected, correct) {
+    function checkAnswer(selected, correct, button) {
       // Clear the timer since an answer is chosen
       if (timerInterval) {
         clearInterval(timerInterval);
@@ -145,13 +146,23 @@ document.addEventListener("DOMContentLoaded", function () {
   
       if (selected === correct) {
         score++;
+
+        // Change button background colour
+        button.classList.remove('btn-secondary');
+        button.classList.add('btn-success');
+
         answerElement.textContent = "Correct!";
-        answerElement.classList.add("text-success");
         answerElement.classList.remove("text-danger");
+        answerElement.classList.add("text-success");
       } else {
+
+        // Change button background colour
+        button.classList.remove('btn-secondary');
+        button.classList.add('btn-danger');
+
         answerElement.textContent = "Wrong!";
-        answerElement.classList.add("text-danger");
         answerElement.classList.remove("text-success");
+        answerElement.classList.add("text-danger");
       }
   
       scoreElement.textContent = `Score: ${score}`;
