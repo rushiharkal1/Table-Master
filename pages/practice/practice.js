@@ -101,6 +101,17 @@ document.addEventListener("DOMContentLoaded", function () {
         answerElement.classList.add("text-success");
         optionsElement.innerHTML = ""; // Clear options
         timerElement.innerText = ""; // Clear timer
+
+        // Show the "Go Back" button
+        const endButtonsContainer = document.getElementById("end-buttons-container");
+        endButtonsContainer.style.display = "block";
+
+        // Set up a click handler for the button
+        const goBackButton = document.getElementById("go-back-button");
+        goBackButton.addEventListener("click", () => {
+          window.location.href = "../practice_menu/practice_menu.html"; // Redirect to practice_menu
+        });
+
         return;
       }
   
