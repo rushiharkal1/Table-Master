@@ -17,6 +17,10 @@ let navbar = `
                         <a class="nav-link" id="home-link" href="../../pages/home/home.html">Home</a>
                     </li>
 
+                     <li class="nav-item">
+                        <a class="nav-link" id="learn-link" href="../../pages/learn/learn.html">Learn</a>
+                    </li>
+
                     <li class="nav-item">
                         <a class="nav-link" id="practice-link" href="../../pages/practice_menu/practice_menu.html">Practice</a>
                     </li>

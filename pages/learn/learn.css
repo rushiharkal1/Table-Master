@@ -1,0 +1,33 @@
+.hidden {
+    display: none;
+}
+
+.header {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.form-container {
+    margin: 20px;
+}
+
+.table-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+table {
+    margin: auto;
+    border-collapse: collapse;
+    width: 50%;
+}
+
+th, td {
+    border: 1px solid #dee2e6;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #0080ff;
+}
