@@ -52,6 +52,8 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById("practice-link").classList.add("active");
         } else if (path.includes("about.html")) {
             document.getElementById("about-link").classList.add("active");
+        } else if (path.includes("learn.html")) {
+            document.getElementById("learn-link").classList.add("active");
         }
     } else {
         console.error("Navbar container not found!");
