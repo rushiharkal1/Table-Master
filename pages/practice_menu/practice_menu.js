@@ -3,25 +3,42 @@
 function generateButtons(containerId, start, end) {
     const container = document.getElementById(containerId);
     for (let i = start; i <= end; i++) {
-      // Create Bootstrap column and button
-      const colWrapper = document.createElement("div");
-      colWrapper.className = "col mb-2 mx-auto"; // Bootstrap column for spacing
+        // Create Bootstrap column and button
+        const colWrapper = document.createElement("div");
+        colWrapper.className = "col mb-2 mx-auto"; // Bootstrap column for spacing
 
-      const button = document.createElement("button");
-      button.className = "btn btn-outline-secondary";
-      button.style = "width: 50px; height: 40px;";
-      button.innerText = i;
-      button.onclick = () => toggleSelection(button);
+        const button = document.createElement("button");
+        button.className = "btn btn-secondary";
+        button.style = "width: 50px; height: 40px;";
+        button.innerText = i;
 
-      colWrapper.appendChild(button);
-      container.appendChild(colWrapper);
+        // Use onclick for toggleSelection() function
+        button.onclick = () => toggleSelection(button);
+
+        colWrapper.appendChild(button);
+        container.appendChild(colWrapper);
     }
 }
 
-// Toggle button selection
+// Toggle button selection with btn-secondary (default) and btn-primary (selected)
 function toggleSelection(button) {
+    // Selected button
     button.classList.toggle("selected");
+
+    // Toggle button background colour
+    if (button.classList.contains("btn-secondary")) {
+        button.classList.remove("btn-secondary");
+        button.classList.add("btn-primary"); // Selected state
+    } else if (button.classList.contains("btn-primary")) {
+        button.classList.remove("btn-primary");
+        button.classList.add("btn-secondary"); // Default state
+    }
+
+    // Ensure the visual state updates immediately
+    button.blur(); // Forcing blur to refresh on mobile
 }
+
+
 
 // Handle the "Start Practice" button
 function startPractice() {

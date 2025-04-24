@@ -1,9 +1,3 @@
-/* Selected Button Style */
-.selected {
-    background-color: #6C757D;
-    color: #fff;
-}
-
 /* Error Message */
 .error {
     border-bottom: 2px solid palevioletred;
