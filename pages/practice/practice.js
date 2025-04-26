@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
   
       const currentQuestion = questions[currentQuestionIndex];
-      questionNumberElement.textContent = `Question Number: ${currentQuestionIndex + 1}`;
+      questionNumberElement.textContent = `Ques: ${currentQuestionIndex + 1}`;
       questionElement.textContent = `What is ${currentQuestion.table} x ${currentQuestion.multiple}?`;
   
       // Generate random options including the correct answer

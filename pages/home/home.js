@@ -27,19 +27,6 @@ function updateFlips() {
   
     cycle++;
 }
-
-
-document.addEventListener("DOMContentLoaded", () => {
-    const menuToggle = document.getElementById("menuToggle");
-    
-    menuToggle.addEventListener("click", function () {
-      if (menuToggle.textContent.trim() === "Menu") {
-        menuToggle.textContent = "Close";
-      } else {
-        menuToggle.textContent = "Menu";
-      }
-    });
-});
   
 
 // Start the animation immediately and update every 2.5 seconds
